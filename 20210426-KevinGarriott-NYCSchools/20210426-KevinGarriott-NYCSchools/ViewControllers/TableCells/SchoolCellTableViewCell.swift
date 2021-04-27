@@ -10,6 +10,7 @@ import UIKit
 class SchoolCellTableViewCell: UITableViewCell {
 
   @IBOutlet weak var schoolTitleLabel: UILabel!
+  @IBOutlet weak var schoolNeighborhoodLabel: UILabel?
   //@IBOutlet weak var restaurantDescriptionLabel: UILabel!
   //@IBOutlet weak var restaruantCategoryLabelView: UIView!
   //@IBOutlet weak var restaruantCategoryLabel: UILabel!
@@ -24,6 +25,7 @@ class SchoolCellTableViewCell: UITableViewCell {
       self.backgroundColor = UIColor (hex: "0099ff", alpha: 0.08)
     }
     schoolTitleLabel.text = school.school_name
+    schoolNeighborhoodLabel?.text = school.neighborhood
     //self.accessoryView =
     
     print("cell got school: \(school)")

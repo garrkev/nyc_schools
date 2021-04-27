@@ -8,6 +8,6 @@
 struct School: Decodable {
   let dbn:String?
   let school_name:String?
-  
+  let neighborhood:String?
   
 }
