@@ -120,7 +120,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     let schoolResult = schoolResults[indexPath.row]
     
     if let cell = tableView.dequeueReusableCell(withIdentifier: "SchoolCellTableViewCell") as? SchoolCellTableViewCell {
-      cell.setupCellWith(school: schoolResult)
+      cell.setupCellWith(school: schoolResult, atIndex: indexPath.row)
       return cell
     }
     

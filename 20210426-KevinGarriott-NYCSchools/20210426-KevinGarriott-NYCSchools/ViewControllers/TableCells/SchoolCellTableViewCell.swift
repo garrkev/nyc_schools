@@ -16,8 +16,16 @@ class SchoolCellTableViewCell: UITableViewCell {
 
   // MARK: Functions
   
-  func setupCellWith(school: School) {
+  func setupCellWith(school: School, atIndex: Int) {
+    
+    if(atIndex % 2 == 0) {
+      self.backgroundColor = .white
+    } else {
+      self.backgroundColor = UIColor (hex: "0099ff", alpha: 0.08)
+    }
     schoolTitleLabel.text = school.school_name
+    //self.accessoryView =
+    
     print("cell got school: \(school)")
 //    restaurantTitleLabel.text = restaurant.name
 //    restaurantDescriptionLabel.text = restaurant.description

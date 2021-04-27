@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-Uq-79g" userLabel="{schoolsTableView}">
-                                <rect key="frame" x="0.0" y="44" width="406" height="852"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-Uq-79g" userLabel="{schoolsTableView}">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="hPy-Gg-x5m"/>
@@ -44,8 +43,14 @@
                         <constraints>
                             <constraint firstItem="Vag-Zo-TXP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5s4-eW-BND"/>
                             <constraint firstItem="Vag-Zo-TXP" firstAttribute="centerX" secondItem="1aa-IV-pHg" secondAttribute="centerX" id="AV0-EF-lph"/>
+                            <constraint firstItem="xcT-Uq-79g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ClB-Hc-wSX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vag-Zo-TXP" secondAttribute="bottom" constant="352" id="Hbd-Vp-kid"/>
+                            <constraint firstItem="xcT-Uq-79g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jge-Tu-nLS"/>
                             <constraint firstItem="Vag-Zo-TXP" firstAttribute="top" secondItem="1aa-IV-pHg" secondAttribute="bottom" constant="1.5" id="PB2-nB-PNQ"/>
+                            <constraint firstAttribute="bottom" secondItem="xcT-Uq-79g" secondAttribute="bottom" id="PYd-NO-qZi"/>
+                            <constraint firstItem="xcT-Uq-79g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QbL-jZ-AbR"/>
+                            <constraint firstItem="xcT-Uq-79g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="lZT-34-Mw1"/>
+                            <constraint firstItem="xcT-Uq-79g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mWi-Tf-BEi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
