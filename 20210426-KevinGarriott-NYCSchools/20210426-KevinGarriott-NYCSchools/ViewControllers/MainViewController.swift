@@ -11,14 +11,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
   @IBOutlet weak var titleBarNavigationBar: UINavigationBar!
   @IBOutlet weak var schoolsTableView: UITableView!
-  //@IBOutlet weak var loadingLabel: UILabel!
-  //@IBOutlet weak var loadingActivity: UIActivityIndicatorView!
+  @IBOutlet weak var loadingLabel: UILabel!
+  @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
   
   var schoolResults = [School]()
   var hasInitiallyLoaded: Bool = false
   
   override var preferredStatusBarStyle: UIStatusBarStyle {
-    return .lightContent
+    return .darkContent
   }
   
   // MARK: Functions
@@ -70,15 +70,18 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
   ///
   /// Use the API closures returns whether success or failure.
   func hideLoadingElements() {
-    //self.loadingLabel.isHidden = true
-    //self.loadingActivity.stopAnimating()
+    self.loadingLabel.isHidden = true
+    self.loadingActivity.stopAnimating()
+    self.schoolsTableView.isHidden = false
   }
   
   func showLoadingElements() { //don't really need this
     //reload table and service
     
-    //self.loadingLabel.isHidden = false
-    //self.loadingActivity.isHidden = false
+    self.schoolsTableView.isHidden = true
+    self.loadingLabel.isHidden = false
+    self.loadingActivity.isHidden = false
+    self.loadingActivity.startAnimating()
     
 //    self.loadingLabel.isHidden = false
 //    self.loadingActivity.isHidden = false
@@ -149,13 +152,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
      
       let reloadButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.reloadSchoolsTable))
       //reloadButton.tintColor = .white
+      reloadButton.tintColor = .darkGray
       self.navigationItem.rightBarButtonItem = reloadButton
       
       navController.navigationBar.isHidden = true
       
     }
     
-    // restaurantsTableView.contentInset = UIEdgeInsets(top: 44.0, left: 0.0, bottom: 0.0, right: 0.0)
+    schoolsTableView.contentInset = UIEdgeInsets(top: 44.0, left: 0.0, bottom: 0.0, right: 0.0)
     
     
   }
