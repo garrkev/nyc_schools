@@ -60,6 +60,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
       }//result
       
+      if !self.hasInitiallyLoaded {
+         self.hasInitiallyLoaded = true
+       }
       self.hideLoadingElements()
 
     }//api
@@ -73,21 +76,24 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     self.loadingLabel.isHidden = true
     self.loadingActivity.stopAnimating()
     self.schoolsTableView.isHidden = false
+    self.schoolsTableView.layoutIfNeeded()
+    
+    if schoolsTableView.numberOfRows(inSection: 0) != 0 {
+      schoolsTableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+    }
+    
   }
   
-  func showLoadingElements() { //don't really need this
-    //reload table and service
+  func showLoadingElements() {
+    
+    self.schoolResults.removeAll()
     
     self.schoolsTableView.isHidden = true
     self.loadingLabel.isHidden = false
     self.loadingActivity.isHidden = false
     self.loadingActivity.startAnimating()
     
-//    self.loadingLabel.isHidden = false
-//    self.loadingActivity.isHidden = false
-//    self.loadingActivity.startAnimating()
-    
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + 0.20) {
       self.loadElementsFromServcie()
     }
     
@@ -100,7 +106,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
   }
   
-
   
   // MARK: Table Delegate Functions
   func numberOfSections(in tableView: UITableView) -> Int {
@@ -128,12 +133,20 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    let school = schoolResults[indexPath.row]
+    let schoolDetail = SchoolDetailViewController()
+    
+    schoolDetail.school = school
+    
+    self.navigationController?.pushViewController(schoolDetail, animated: true)
+    
     tableView.deselectRow(at: indexPath, animated: false)
   }
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    showLoadingElements()
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -145,13 +158,14 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     
+    showLoadingElements()
+    
     let schoolCell = UINib(nibName: "SchoolCellTableViewCell", bundle: nil)
     schoolsTableView.register(schoolCell, forCellReuseIdentifier: "SchoolCellTableViewCell")
     
     if let navController = self.navigationController {
      
       let reloadButton = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(self.reloadSchoolsTable))
-      //reloadButton.tintColor = .white
       reloadButton.tintColor = .darkGray
       self.navigationItem.rightBarButtonItem = reloadButton
       
@@ -160,7 +174,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     schoolsTableView.contentInset = UIEdgeInsets(top: 44.0, left: 0.0, bottom: 0.0, right: 0.0)
-    
     
   }
   

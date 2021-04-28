@@ -21,6 +21,8 @@
 		975A3A9F2637746E0055F07B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975A3A9D2637746E0055F07B /* Main.storyboard */; };
 		975A3AA1263774710055F07B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 975A3AA0263774710055F07B /* Assets.xcassets */; };
 		975A3AA4263774710055F07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975A3AA2263774710055F07B /* LaunchScreen.storyboard */; };
+		979B11242638D8FC00BB5452 /* SchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B11232638D8FC00BB5452 /* SchoolDetailViewController.swift */; };
+		979B11262638D91B00BB5452 /* SchoolDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979B11252638D91B00BB5452 /* SchoolDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,7 @@
 		975248A626388C4500F9E438 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		975248A726388C4600F9E438 /* AppExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExtensions.swift; sourceTree = "<group>"; };
 		975248B026388CA500F9E438 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		975A3A942637746D0055F07B /* NYC .app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYC .app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		975A3A942637746D0055F07B /* Schools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Schools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		975A3A972637746E0055F07B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		975A3A992637746E0055F07B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		975A3A9E2637746E0055F07B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		975A3AA5263774710055F07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		975A3AAE263774710055F07B /* _0210426_KevinGarriott_NYCSchoolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _0210426_KevinGarriott_NYCSchoolsTests.swift; sourceTree = "<group>"; };
 		975A3AB0263774710055F07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		979B11232638D8FC00BB5452 /* SchoolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewController.swift; sourceTree = "<group>"; };
+		979B11252638D91B00BB5452 /* SchoolDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				9752489A2638541C00F9E438 /* TableCells */,
+				979B11222638D8D200BB5452 /* SchoolDetail */,
 				975248972638527B00F9E438 /* MainViewController.swift */,
 			);
 			path = ViewControllers;
@@ -122,7 +127,7 @@
 		975A3A952637746D0055F07B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				975A3A942637746D0055F07B /* NYC .app */,
+				975A3A942637746D0055F07B /* Schools.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +156,15 @@
 			path = "20210426-KevinGarriott-NYCSchoolsTests";
 			sourceTree = "<group>";
 		};
+		979B11222638D8D200BB5452 /* SchoolDetail */ = {
+			isa = PBXGroup;
+			children = (
+				979B11232638D8FC00BB5452 /* SchoolDetailViewController.swift */,
+				979B11252638D91B00BB5452 /* SchoolDetailViewController.xib */,
+			);
+			path = SchoolDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,7 +182,7 @@
 			);
 			name = "20210426-KevinGarriott-NYCSchools";
 			productName = "20210426-KevinGarriott-NYCSchools";
-			productReference = 975A3A942637746D0055F07B /* NYC .app */;
+			productReference = 975A3A942637746D0055F07B /* Schools.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -209,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				975A3AA4263774710055F07B /* LaunchScreen.storyboard in Resources */,
+				979B11262638D91B00BB5452 /* SchoolDetailViewController.xib in Resources */,
 				975A3AA1263774710055F07B /* Assets.xcassets in Resources */,
 				975A3A9F2637746E0055F07B /* Main.storyboard in Resources */,
 				975248A22638720100F9E438 /* SchoolCellTableViewCell.xib in Resources */,
@@ -224,6 +239,7 @@
 			files = (
 				975248AE26388C4600F9E438 /* AppExtensions.swift in Sources */,
 				975248982638527B00F9E438 /* MainViewController.swift in Sources */,
+				979B11242638D8FC00BB5452 /* SchoolDetailViewController.swift in Sources */,
 				9752489F263865BB00F9E438 /* SchoolCellTableViewCell.swift in Sources */,
 				975248B126388CA500F9E438 /* APIClient.swift in Sources */,
 				975A3A982637746E0055F07B /* AppDelegate.swift in Sources */,
@@ -387,7 +403,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmllc.nyc;
-				PRODUCT_NAME = "NYC ";
+				PRODUCT_NAME = Schools;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -407,7 +423,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmllc.nyc;
-				PRODUCT_NAME = "NYC ";
+				PRODUCT_NAME = Schools;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

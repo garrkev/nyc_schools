@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "new-york-city-logo-with-statue-liberty_69367-39.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "new-york-city-logo-with-statue-liberty_69367-38.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "new-york-city-logo-with-statue-liberty_69367-37.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

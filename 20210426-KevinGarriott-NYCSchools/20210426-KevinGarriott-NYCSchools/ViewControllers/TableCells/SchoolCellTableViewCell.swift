@@ -11,9 +11,7 @@ class SchoolCellTableViewCell: UITableViewCell {
 
   @IBOutlet weak var schoolTitleLabel: UILabel!
   @IBOutlet weak var schoolNeighborhoodLabel: UILabel?
-  //@IBOutlet weak var restaurantDescriptionLabel: UILabel!
-  //@IBOutlet weak var restaruantCategoryLabelView: UIView!
-  //@IBOutlet weak var restaruantCategoryLabel: UILabel!
+
 
   // MARK: Functions
   
@@ -26,19 +24,13 @@ class SchoolCellTableViewCell: UITableViewCell {
     }
     schoolTitleLabel.text = school.school_name
     schoolNeighborhoodLabel?.text = school.neighborhood
-    //self.accessoryView =
     
-    print("cell got school: \(school)")
-//    restaurantTitleLabel.text = restaurant.name
-//    restaurantDescriptionLabel.text = restaurant.description
-//    restaruantCategoryLabel.text = restaurant.category
+    //print("cell got school: \(school)")
     
   }
   
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)
-
-    // Configure the view for the selected state
   }
   
   // MARK: View Functions
