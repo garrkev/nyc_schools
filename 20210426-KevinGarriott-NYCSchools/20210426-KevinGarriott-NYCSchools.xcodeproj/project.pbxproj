@@ -23,6 +23,7 @@
 		975A3AA4263774710055F07B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 975A3AA2263774710055F07B /* LaunchScreen.storyboard */; };
 		979B11242638D8FC00BB5452 /* SchoolDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B11232638D8FC00BB5452 /* SchoolDetailViewController.swift */; };
 		979B11262638D91B00BB5452 /* SchoolDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 979B11252638D91B00BB5452 /* SchoolDetailViewController.xib */; };
+		979B1128263966C400BB5452 /* SATScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979B1127263966C400BB5452 /* SATScore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		975A3AB0263774710055F07B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		979B11232638D8FC00BB5452 /* SchoolDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailViewController.swift; sourceTree = "<group>"; };
 		979B11252638D91B00BB5452 /* SchoolDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolDetailViewController.xib; sourceTree = "<group>"; };
+		979B1127263966C400BB5452 /* SATScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SATScore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				9752489B263864ED00F9E438 /* School.swift */,
+				979B1127263966C400BB5452 /* SATScore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				975248982638527B00F9E438 /* MainViewController.swift in Sources */,
 				979B11242638D8FC00BB5452 /* SchoolDetailViewController.swift in Sources */,
 				9752489F263865BB00F9E438 /* SchoolCellTableViewCell.swift in Sources */,
+				979B1128263966C400BB5452 /* SATScore.swift in Sources */,
 				975248B126388CA500F9E438 /* APIClient.swift in Sources */,
 				975A3A982637746E0055F07B /* AppDelegate.swift in Sources */,
 				975A3A9A2637746E0055F07B /* SceneDelegate.swift in Sources */,

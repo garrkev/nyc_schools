@@ -9,6 +9,7 @@
 // MARK: -
 // MARK: *API
 let kApiURL = "https://data.cityofnewyork.us/resource/s3k6-pzi2.json"
+let kApiSatURL = "https://data.cityofnewyork.us/resource/f9bf-2cp4.json?dbn="
 
 // MARK: -
 // MARK: *USER FEEDBACK

@@ -10,5 +10,4 @@ struct School: Decodable {
   let school_name:String?
   let neighborhood:String?
   let overview_paragraph:String?
-  
 }
