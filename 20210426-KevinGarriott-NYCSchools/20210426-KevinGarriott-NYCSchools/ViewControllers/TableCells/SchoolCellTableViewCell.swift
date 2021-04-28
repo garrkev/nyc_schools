@@ -23,7 +23,7 @@ class SchoolCellTableViewCell: UITableViewCell {
       self.backgroundColor = UIColor (hex: "0099ff", alpha: 0.08)
     }
     schoolTitleLabel.text = school.school_name
-    schoolNeighborhoodLabel?.text = school.neighborhood
+    schoolNeighborhoodLabel?.text = "@" + (school.neighborhood ?? "")
     
     //print("cell got school: \(school)")
     
